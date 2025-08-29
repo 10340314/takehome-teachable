@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    environment:
+      EXTERNAL_API_URL: ${EXTERNAL_API_URL}
+      EXTERNAL_API_KEY: ${EXTERNAL_API_KEY}
+    ports:
+      - "8080:8080"
